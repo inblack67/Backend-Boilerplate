@@ -45,7 +45,7 @@ const main = async () => {
 		app,
 		cors: {
 			credentials: true,
-			origin: process.env.CLIENT_URL
+			origin: process.env.CLIENT_URL,
 		},
 	});
 

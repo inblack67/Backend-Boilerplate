@@ -5,10 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.userSessionIdPrefix = exports.redisSessionIdPrefix = exports.__prod__ = void 0;
 
-var __prod__ = process.env.NODE_ENV === 'production';
+const __prod__ = process.env.NODE_ENV === 'production';
 
 exports.__prod__ = __prod__;
-var redisSessionIdPrefix = 'sess:';
+const redisSessionIdPrefix = 'sess:';
 exports.redisSessionIdPrefix = redisSessionIdPrefix;
-var userSessionIdPrefix = 'sess-user:';
+const userSessionIdPrefix = 'sess-user:';
 exports.userSessionIdPrefix = userSessionIdPrefix;

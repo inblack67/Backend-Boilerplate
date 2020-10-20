@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -11,8 +11,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var errorHandler = function errorHandler(err, req, res, next) {
-  var error = _objectSpread({}, err);
+const errorHandler = (err, req, res, next) => {
+  let error = _objectSpread({}, err);
 
   error.message = err.message;
   return res.status(error.statusCode || 500).json({
@@ -22,4 +22,4 @@ var errorHandler = function errorHandler(err, req, res, next) {
 };
 
 var _default = errorHandler;
-exports["default"] = _default;
+exports.default = _default;

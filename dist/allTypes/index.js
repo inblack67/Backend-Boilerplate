@@ -53,7 +53,7 @@ Object.keys(_User).forEach(function (key) {
     }
   });
 });
-var GQLDATE = (0, _schema.decorateType)(_graphqlScalars.GraphQLDate, {
+const GQLDATE = (0, _schema.decorateType)(_graphqlScalars.GraphQLDate, {
   rootTyping: 'Date',
   asNexusMethod: 'date'
 });

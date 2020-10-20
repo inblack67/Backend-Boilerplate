@@ -6,16 +6,18 @@
   "license": "MIT",
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "nodemon --exec babel-node src/server.js",
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "dev": "yarn build & nodemon dist/server.js"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@nexus/schema": "^0.16.0",
     "apollo-server-express": "^2.18.2",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "connect-redis": "^5.0.0",
     "cookie": "^0.4.1",
+    "core-js": "^3.6.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
@@ -26,7 +28,6 @@
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
-    "@babel/node": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.5"
