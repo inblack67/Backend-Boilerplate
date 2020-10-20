@@ -38,7 +38,7 @@ const main = async () => {
 
 	const apolloServer = new ApolloServer({
 		schema,
-		context: ({ req, res }) => ({ req, res, session: req.session }),
+		context: ({ req, res }) => ({ req, res, session: req.session, redis: RedisClient }),
 	});
 
 	apolloServer.applyMiddleware({
